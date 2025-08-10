@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: eco-token
+            expected-sender: ST34E8WYCXEPV7CD9AFMFGHTRRP5WPNVYF8P1XQ6S
+            cost: 22730
+            path: "contracts\\simple-token.clar"
+            anchor-block-only: true
+            clarity-version: 2
+      epoch: "2.4"
